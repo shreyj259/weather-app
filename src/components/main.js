@@ -4,7 +4,7 @@ import SearchComp from "./search";
 import MainCard from "./mainCard";
 import './styles/main.css';
 
-function MainComponent(){
+function MainComponent(props){
     const [qvalue,setqvalue]=useState("India");
     const [shouldFetch,setshouldFetch]=useState(0);
     const [currentData,setCurrentData]=useState({});
@@ -35,7 +35,7 @@ function MainComponent(){
     }  
     
     useEffect(() => {
-        fetchApi(qvalue).then(response =>{
+        fetchApi(qvalue,props.apiKey).then(response =>{
             setCurrentData({...response});
             setshouldFetch();
         }).catch(error=>{
@@ -46,7 +46,7 @@ function MainComponent(){
 
 
     useEffect(()=>{
-        searchBox(qvalue).then(response =>{
+        searchBox(qvalue,props.apiKey).then(response =>{
             setsearchData(response.data);
         }).catch(error=>{
             console.log(error);

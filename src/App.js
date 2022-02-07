@@ -2,8 +2,9 @@ import './App.css';
 import MainComponent from './components/main';
 
 function App() {
+  const apiKey=process.env.REACT_APP_API_KEY
   return (
-    <MainComponent/>
+    <MainComponent apiKey={apiKey}/>
   );
 }
 
