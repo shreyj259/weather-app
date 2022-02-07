@@ -2,7 +2,11 @@
   "name": "weather",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "homepage": "http://shreyj259.github.io/weather-app",
+=======
+  "homepage": "http://shreyj259.github.io/weather-app", 
+>>>>>>> 9de453614222e094b11b1dda2ae1a2b09f2df0b9
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
