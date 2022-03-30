@@ -35,7 +35,7 @@ function MainComponent(props){
     }  
     
     useEffect(() => {
-        fetchApi(qvalue,props.apiKey).then(response =>{
+        fetchApi(qvalue).then(response =>{
             setCurrentData({...response});
             setshouldFetch();
         }).catch(error=>{
@@ -46,7 +46,7 @@ function MainComponent(props){
 
 
     useEffect(()=>{
-        searchBox(qvalue,props.apiKey).then(response =>{
+        searchBox(qvalue).then(response =>{
             setsearchData(response.data);
         }).catch(error=>{
             console.log(error);
